@@ -1,0 +1,55 @@
+{
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "theme": "Gruvbox Dark",
+  "icon_theme": "Material Icon Theme",
+
+  "ui_font_family": "JetBrains Mono",
+  "ui_font_size": 14,
+  "ui_font_weight": 400,
+
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 12,
+  "buffer_font_weight": 400,
+  "buffer_font_features": { "calt": true },
+  "current_line_highlight": "none",
+
+  "base_keymap": "VSCode",
+  "tab_size": 2,
+
+  "project_panel": { "hide_root": true, "entry_spacing": "standard" },
+  "toolbar": { "breadcrumbs": false, "quick_actions": false },
+  "tabs": { "file_icons": true },
+
+  "git": { "inline_blame": { "enabled": false }, "git_gutter": "hide" },
+  "double_click_in_multibuffer": "open",
+
+  "extend_comment_on_newline": false,
+
+  "inline_code_actions": false,
+  "edit_predictions": { "mode": null },
+  "show_edit_predictions": false,
+  "completions": { "lsp_insert_mode": "replace_suffix" },
+  "minimap": {
+    "show": "always",
+    "current_line_highlight": "none",
+    "thumb": "hover",
+    "thumb_border": "none"
+  },
+
+  "gutter": {
+    "breakpoints": false,
+    "line_numbers": false,
+    "folds": false,
+    "runnables": false
+  },
+  "indent_guides": { "enabled": false },
+
+  "terminal": { "cursor_shape": "bar" },
+
+  "language_servers": ["!eslint", "!typescript-language-server", "..."]
+}
