@@ -1,15 +1,19 @@
 [
   {
-    "context": "(Editor && showing_completions)",
+    "context": "Editor && showing_completions",
     "bindings": { "tab": "editor::ConfirmCompletion" }
   },
+
   {
-    "context": "(Editor && !(showing_completions || edit_prediction || edit_prediction_conflict))",
+    "context": "Editor && !(showing_completions || edit_prediction || edit_prediction_conflict)",
     "bindings": { "tab": ["workspace::SendKeystrokes", "\t"] }
   },
+
   {
+    "context": "",
     "bindings": { "ctrl-tab": "pane::ActivateNextItem" }
   },
+
   {
     "context": "Workspace",
     "bindings": {
