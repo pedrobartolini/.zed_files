@@ -1,10 +1,7 @@
 {
-  "collaboration_panel": {
-    "dock": "right"
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
+  "collaboration_panel": { "dock": "right" },
+  "outline_panel": { "dock": "right" },
+
   "theme": "Gruvbox Dark",
   "icon_theme": "Material Icon Theme",
 
