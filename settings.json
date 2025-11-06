@@ -1,6 +1,6 @@
 {
   // THEME
-  "theme": "Gruvbox Dark",
+  "theme": "Bartolini Nightfox - blurred",
   "icon_theme": "Material Icon Theme",
 
   // UI
@@ -9,7 +9,11 @@
   "ui_font_weight": 400,
   "collaboration_panel": { "dock": "right" },
   "outline_panel": { "dock": "right" },
-  "project_panel": { "hide_root": true, "entry_spacing": "standard" },
+  "project_panel": {
+    "hide_root": true,
+    "entry_spacing": "standard",
+    "sticky_scroll": false
+  },
   "toolbar": { "breadcrumbs": false, "quick_actions": false },
   "tabs": { "file_icons": true },
 
@@ -19,7 +23,6 @@
   "buffer_font_weight": 400,
   "buffer_font_features": { "calt": true },
   "current_line_highlight": "none",
-  "git": { "inline_blame": { "enabled": false }, "git_gutter": "hide" },
   "indent_guides": { "enabled": false },
   "gutter": {
     "breakpoints": false,
@@ -44,7 +47,11 @@
   "extend_comment_on_newline": false,
 
   // TERMINAL
-  "terminal": { "cursor_shape": "bar" },
+  "terminal": {
+    "cursor_shape": "bar",
+    "button": false,
+    "shell": "system"
+  },
 
   // LSP and AGENT
   "show_edit_predictions": false,
@@ -56,7 +63,7 @@
       "initialization_options": {
         // get more cargo-less diagnostics from rust-analyzer,
         // which might include false-positives (those can be turned off by their names)
-        "diagnostics": { "experimental": { "enable": true } },
+        // "diagnostics": { "experimental": { "enable": true } },
         // To disable the checking entirely
         // (ignores all cargo and check settings below)
         "checkOnSave": true,
@@ -66,5 +73,9 @@
         "check": { "workspace": false }
       }
     }
-  }
+  },
+
+  // GIT
+  "git": { "inline_blame": { "enabled": false }, "git_gutter": "hide" },
+  "git_panel": { "sort_by_path": true }
 }

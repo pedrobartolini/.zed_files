@@ -15,9 +15,26 @@
   },
 
   {
-    "context": "Workspace",
+    "context": "Workspace && !Editor && !Terminal",
     "bindings": {
       "ctrl-left": "project_panel::CollapseAllEntries"
+    }
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      // Word deletion
+      "ctrl-backspace": ["terminal::SendKeystroke", "ctrl-backspace"],
+      "ctrl-delete": ["terminal::SendText", "\u001b[3;5~"],
+
+      // Word navigation - Ctrl+Left/Right
+      "ctrl-left": ["terminal::SendText", "\u001b[1;5D"],
+      "ctrl-right": ["terminal::SendText", "\u001b[1;5C"],
+
+      // Line navigation - Home/End
+      "home": ["terminal::SendText", "\u001b[H"],
+      "end": ["terminal::SendText", "\u001b[F"]
     }
   }
 ]
