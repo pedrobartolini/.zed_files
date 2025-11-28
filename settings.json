@@ -1,6 +1,6 @@
 {
   // THEME
-  "theme": "Bartolini Nightfox - blurred",
+  "theme": "Gruvbox Dark",
   "icon_theme": "Material Icon Theme",
 
   // UI
@@ -63,14 +63,23 @@
       "initialization_options": {
         // get more cargo-less diagnostics from rust-analyzer,
         // which might include false-positives (those can be turned off by their names)
-        // "diagnostics": { "experimental": { "enable": true } },
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          }
+        },
         // To disable the checking entirely
         // (ignores all cargo and check settings below)
         "checkOnSave": true,
         // To check the `lib` target only.
-        "cargo": { "allTargets": false },
+        "cargo": {
+          "allTargets": false
+        },
+
         // Use `-p` instead of `--workspace` for cargo check
-        "check": { "workspace": false }
+        "check": {
+          "workspace": false
+        }
       }
     }
   },
