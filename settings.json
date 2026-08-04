@@ -1,18 +1,40 @@
 {
   // THEME
-  "theme": "Gruvbox Dark",
-  "icon_theme": "Material Icon Theme",
+  "proxy": "",
+  "prettier": {
+    "allowed": true,
+  },
+  "format_on_save": "on",
+  "agent": {
+    "play_sound_when_agent_done": "always",
+    "notify_when_agent_waiting": "never",
+    "dock": "right",
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
 
   // UI
   "ui_font_family": "JetBrains Mono",
   "ui_font_size": 14,
   "ui_font_weight": 400,
   "collaboration_panel": { "dock": "right" },
-  "outline_panel": { "dock": "right" },
+  "outline_panel": { "button": false, "dock": "right" },
   "project_panel": {
+    "dock": "left",
     "hide_root": true,
     "entry_spacing": "standard",
-    "sticky_scroll": false
+    "sticky_scroll": false,
   },
   "toolbar": { "breadcrumbs": false, "quick_actions": false },
   "tabs": { "file_icons": true },
@@ -23,12 +45,12 @@
   "buffer_font_weight": 400,
   "buffer_font_features": { "calt": true },
   "current_line_highlight": "none",
-  "indent_guides": { "enabled": false },
+  "indent_guides": { "enabled": true },
   "gutter": {
     "breakpoints": false,
     "line_numbers": false,
     "folds": false,
-    "runnables": false
+    "runnables": false,
   },
   "inline_code_actions": false,
 
@@ -37,7 +59,7 @@
     "show": "always",
     "current_line_highlight": "none",
     "thumb": "hover",
-    "thumb_border": "none"
+    "thumb_border": "none",
   },
 
   // ACTIONS
@@ -50,7 +72,7 @@
   "terminal": {
     "cursor_shape": "bar",
     "button": false,
-    "shell": "system"
+    "shell": "system",
   },
 
   // LSP and AGENT
@@ -58,33 +80,17 @@
   "completions": { "lsp_insert_mode": "replace_suffix" },
   "language_servers": ["!eslint", "!typescript-language-server", "..."],
 
-  "lsp": {
-    "rust-analyzer": {
-      "initialization_options": {
-        // get more cargo-less diagnostics from rust-analyzer,
-        // which might include false-positives (those can be turned off by their names)
-        "diagnostics": {
-          "experimental": {
-            "enable": true
-          }
-        },
-        // To disable the checking entirely
-        // (ignores all cargo and check settings below)
-        "checkOnSave": true,
-        // To check the `lib` target only.
-        "cargo": {
-          "allTargets": false
-        },
-
-        // Use `-p` instead of `--workspace` for cargo check
-        "check": {
-          "workspace": false
-        }
-      }
-    }
-  },
-
   // GIT
   "git": { "inline_blame": { "enabled": false }, "git_gutter": "hide" },
-  "git_panel": { "sort_by_path": true }
+  "git_panel": { "dock": "left", "sort_by_path": true },
+
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "effort": "max",
+        "mode": "bypassPermissions",
+      },
+      "type": "registry",
+    },
+  },
 }

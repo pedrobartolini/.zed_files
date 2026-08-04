@@ -1,43 +1,14 @@
 [
   {
-    "context": "Editor && showing_completions",
-    "bindings": { "tab": "editor::ConfirmCompletion" }
-  },
-
-  {
-    "context": "Editor && !(showing_completions || edit_prediction || edit_prediction_conflict)",
-    "bindings": { "tab": ["workspace::SendKeystrokes", "\t"] }
-  },
-
-  {
     "context": "",
     "bindings": {
+      "ctrl-'": "terminal_panel::Toggle",
       "ctrl-tab": "pane::ActivateNextItem",
-      "ctrl-q": null
-    }
+      "ctrl-q": null,
+    },
   },
-
   {
-    "context": "Workspace && !Editor && !Terminal",
-    "bindings": {
-      "ctrl-left": "project_panel::CollapseAllEntries"
-    }
+    "context": "Editor && !(showing_completions || edit_prediction || (edit_prediction && (showing_completions || in_leading_whitespace)))",
+    "bindings": { "tab": ["workspace::SendKeystrokes", "\t"] },
   },
-
-  {
-    "context": "Terminal",
-    "bindings": {
-      // Word deletion
-      "ctrl-backspace": ["terminal::SendKeystroke", "ctrl-backspace"],
-      "ctrl-delete": ["terminal::SendText", "\u001b[3;5~"],
-
-      // Word navigation - Ctrl+Left/Right
-      "ctrl-left": ["terminal::SendText", "\u001b[1;5D"],
-      "ctrl-right": ["terminal::SendText", "\u001b[1;5C"],
-
-      // Line navigation - Home/End
-      "home": ["terminal::SendText", "\u001b[H"],
-      "end": ["terminal::SendText", "\u001b[F"]
-    }
-  }
 ]
