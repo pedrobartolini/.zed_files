@@ -98,6 +98,16 @@
   "show_edit_predictions": false,
   "completions": { "lsp_insert_mode": "replace_suffix" },
   "language_servers": ["!eslint", "!typescript-language-server", "..."],
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "cachePriming": { "numThreads": "logical" },
+        "workspace": {
+          "symbol": { "search": { "kind": "all_symbols" } },
+        },
+      },
+    },
+  },
 
   // GIT
   "git": {
