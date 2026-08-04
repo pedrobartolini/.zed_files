@@ -5,6 +5,11 @@
       "ctrl-'": "terminal_panel::Toggle",
       "ctrl-tab": "pane::ActivateNextItem",
       "ctrl-q": null,
+      "ctrl-shift-c": "editor::Copy",
+      "ctrl-insert": "project_panel::ToggleFocus",
+      "ctrl-home": "git_panel::ToggleFocus",
+      "ctrl-pageup": "agent::Toggle",
+      "ctrl-pagedown": "multi_workspace::ToggleWorkspaceSidebar",
     },
   },
   {
