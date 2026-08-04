@@ -43,8 +43,7 @@
   "ui_font_family": "JetBrains Mono",
   "ui_font_size": 14,
   "ui_font_weight": 400,
-  "collaboration_panel": { "button": false,
-                           "dock": "right" },
+  "collaboration_panel": { "button": false, "dock": "right" },
   "outline_panel": { "button": false, "dock": "right" },
   "project_panel": {
     "dock": "left",
@@ -97,16 +96,46 @@
   // LSP and AGENT
   "show_edit_predictions": false,
   "completions": { "lsp_insert_mode": "replace_suffix" },
-  "language_servers": ["!eslint", "!typescript-language-server", "..."],
-  "lsp": {
-    "rust-analyzer": {
-      "initialization_options": {
-        "cachePriming": { "numThreads": "logical" },
-        "workspace": {
-          "symbol": { "search": { "kind": "all_symbols" } },
-        },
-      },
+  // Zed's built-in defaults set language_servers per-language for TS/TSX/JS,
+  // which overrides this root list — those languages are configured in "languages" below.
+  "languages": {
+    "TypeScript": {
+      "language_servers": [
+        "typescript-ls",
+        "!vtsls",
+        "!typescript-language-server",
+        "!eslint",
+        "...",
+      ],
     },
+    "TSX": {
+      "language_servers": [
+        "typescript-ls",
+        "!vtsls",
+        "!typescript-language-server",
+        "!eslint",
+        "...",
+      ],
+    },
+    "JavaScript": {
+      "language_servers": [
+        "typescript-ls",
+        "!vtsls",
+        "!typescript-language-server",
+        "!eslint",
+        "...",
+      ],
+    },
+  },
+  "lsp": {
+    // "rust-analyzer": {
+    //   "initialization_options": {
+    //     "cachePriming": { "numThreads": "logical" },
+    //     "workspace": {
+    //       "symbol": { "search": { "kind": "all_symbols" } },
+    //     },
+    //   },
+    // },
   },
 
   // GIT

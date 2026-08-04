@@ -16,4 +16,17 @@
     "context": "Editor && !(showing_completions || edit_prediction || (edit_prediction && (showing_completions || in_leading_whitespace)))",
     "bindings": { "tab": ["workspace::SendKeystrokes", "\t"] },
   },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-;": "editor::ToggleComments",
+      "ctrl-/": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-e": "file_finder::Toggle"
+    }
+  }
 ]
